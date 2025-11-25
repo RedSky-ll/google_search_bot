@@ -1,0 +1,9 @@
+blinker==1.7.0
+numpy==2.2.6
+requests==2.31.0
+selenium==4.35.0
+selenium-wire==5.1.0
+setuptools==80.9.0
+ua-generator==2.0.14
+undetected-chromedriver==3.5.5
+urllib3==2.5.0
