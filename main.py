@@ -10,7 +10,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.chrome.options import Options
 
 import undetected_chromedriver as uc
-import ua_generator
 
 # // mine
 from _classes.setting import Setting
@@ -179,3 +178,19 @@ if __name__ == "__main__":
             except:
                 pass
         sleep()
+
+def unsave_activity_history():
+    try:
+        log("در حال غیرفعال‌سازی ذخیره تاریخچه فعالیت‌ها...")
+        chrome.get("chrome://settings/privacySandbox")
+        sleep(3)
+        try:
+            toggle = WebDriverWait(chrome, 10).until(
+                EC.element_to_be_clickable((By.CSS_SELECTOR, 'settings-toggle-button[aria-label="غیرفعال‌سازی تاریخچه فعالیت‌ها"]'))
+            )
+            toggle.click()
+            log("✅ ذخیره تاریخچه فعالیت‌ها غیرفعال شد.")
+        except Exception as e:
+            log(f"❌ خطا در غیرفعال‌سازی تاریخچه فعالیت‌ها: {e}")
+    except Exception as e:
+        log(f"❌ خطا در دسترسی به تنظیمات حریم خصوصی: {e}")

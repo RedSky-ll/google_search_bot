@@ -75,29 +75,29 @@ def activate_mobile_mode(driver):
         log("در حال فعال‌سازی DevTools و حالت موبایل با شورتکات‌ها...")
         time.sleep(1.5)
 
+        responsive_pos_windows = (377, 131)
+        iphone_pos_windows = (377, 309)
+        responsive_pos_mac = (264, 139)
+        iphone_pos_mac = (289, 227)
+        three_dots_tools_pos = (1418, 102) 
+        more_tools_pos = (1374, 624) 
+        dev_tools_pos = (1009, 789) 
+        device_toolbar_pos = (925, 121) 
+        
+        time.sleep(1)        
         # باز کردن DevTools
-        pyautogui.hotkey('ctrl', 'shift', 'i')
-        time.sleep(2.0)
-
-        # فعال کردن Device Toolbar (حالت موبایل)
-        pyautogui.hotkey('ctrl', 'shift', 'm')
-        time.sleep(2.0)
-
-        log("✅ DevTools و حالت موبایل فعال شدند (Ctrl+Shift+I سپس Ctrl+Shift+M)")
-
-        # مختصات‌های نهایی گرفته‌شده
-        responsive_pos = (377, 131)
-        iphone_pos = (377, 309)
-
-        # کلیک خودکار روی Responsive
+        pyautogui.click(three_dots_tools_pos)
+        time.sleep(1.2)
+        pyautogui.click(more_tools_pos)
+        time.sleep(1.5)
+        pyautogui.click(dev_tools_pos)
         time.sleep(1)
-        pyautogui.click(responsive_pos)
-        log(f"📍 کلیک روی Responsive انجام شد در {responsive_pos}")
-
-        # کلیک خودکار روی iPhone 12 Pro
-        time.sleep(1)
-        pyautogui.click(iphone_pos)
-        log(f"📱 کلیک روی iPhone 12 Pro انجام شد در {iphone_pos}")
+        pyautogui.click(device_toolbar_pos)
+        time.sleep(2)
+        pyautogui.click(responsive_pos_mac)
+        time.sleep(1.5)
+        pyautogui.click(iphone_pos_mac)
+        time.sleep(10)
 
         # رفرش صفحه برای اطمینان از فعال بودن حالت موبایل
         try:

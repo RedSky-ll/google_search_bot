@@ -58,7 +58,6 @@ def likelihood(setting, value: str) -> bool:
     value = clean(value)  
     for _link in setting.my_sites:
         domain = clean(str(_link))
-        x = 0
         if re.search(domain, value):
             return True
     return False
