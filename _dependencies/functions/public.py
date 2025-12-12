@@ -1,8 +1,6 @@
 import random
 import time
-import selenium
 import requests
-import json
 import re
 
 ips = ["https://api.ipify.org?format=json","https://api.myip.com"]
@@ -35,21 +33,22 @@ def getIp():
         except :
             continue
 
-def clean(value:str):
-    value = value.replace("https://","")
-    value = value.replace("http://","")
-    value = value.replace("www.","")
-    value = value.rstrip(".")
-    return value
+# def clean(value:str):
+#     value = value.replace("https://","")
+#     value = value.replace("http://","")
+#     value = value.replace("www.","")
+#     # value = value.rstrip(".")
+#     value = value.lower
+#     return value
 
-import re
 
 def clean(value: str) -> str:
     value = value.replace("https://", "")
     value = value.replace("http://", "")
     value = value.replace("www.", "")
 
-    value =  value.replace(r"/+","")
+    # حذف / های تکراری مثل ////page///test
+    value = re.sub(r"/+", "/", value)
     value = value.rstrip(".")
     value = value.rstrip("/")
     return value

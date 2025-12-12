@@ -1,7 +1,6 @@
 from selenium.webdriver.common.by import By
-from .public import getIp, sleep, likelihood
+from .public import sleep, likelihood
 from .logging import log
-from selenium import webdriver
 from .public import scrolling
 import re
 from .App.app import Mobile

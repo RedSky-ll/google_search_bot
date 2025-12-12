@@ -1,24 +1,17 @@
 import time
-import datetime
-import random
-import re
-
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.chrome.options import Options
-
 import undetected_chromedriver as uc
+import pyautogui
 
-# // mine
 from _classes.setting import Setting
 from _classes._link import Links
 from _classes.Link import Link
-from _classes._handles import Handles
 from _classes.Address import Address
 from _dependencies.functions.logging import log
-from _dependencies.functions.public import sleep , scroll , typing , scrolling , getIp , likelihood 
+from _dependencies.functions.public import sleep , scroll , typing , scrolling, likelihood 
 from _dependencies.functions.chrome import fillLinks , getNewIp, authHandle , activate_mobile_mode , phoneclick
 from _dependencies.functions.App.app import Mobile
 # // mine
@@ -72,6 +65,14 @@ def scraper():
     chrome = uc.Chrome(options=chrome_options)
     setting = Setting()
     setting.fill()
+
+    #turning off Search customisation
+    search_custom_btn_pos = (1057, 240)
+    chrome.get("https://www.google.com/history/optout?hl=en-IR")
+    sleep(12)
+    pyautogui.click(search_custom_btn_pos)
+    sleep(12)
+
     chrome.get("https://google.com/")
     log("مرورگر وارد گوگل شد")
     scrolling(chrome)
@@ -146,11 +147,13 @@ def scraper():
                 if likelihood(setting, _link.address):
                     _link.container.click()
                     _address = _link.address
+                    scrolling(chrome)
+                    scrolling(chrome)
+
                     phoneclick(chrome)
                     authHandle(chrome,setting,_address)
-                    sleep(3)
-                    getNewIp(mobile)
-                    sleep(3)
+                    sleep(12)
+                    # getNewIp(mobile)
                 else:
                     log(f"{_link.address} جزو تارگت های ما نیست")
 
