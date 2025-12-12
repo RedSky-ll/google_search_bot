@@ -19,7 +19,7 @@ def getNewIp(mobile):
         mobile.init()
         mobile.airplane(setting)
     except Exception as ex:
-        log(f"موبایل خطا داد \n{ex}\n")
+        log(f"mobile error \n{ex}\n")
     finally:
         try:
             sleep(setting.mobile_sleep)
@@ -36,7 +36,7 @@ def authHandle(driver, setting, _address="[ No Address ]"):
             try:
                 if re.search(_error, _body.text):
                     _errors += 1
-                    log(f"{_address} در این آدرس تشخیص داده شدیم")
+                    log(f"{_address} detected on this address")
                     break
             except:
                 continue
@@ -47,7 +47,7 @@ def authHandle(driver, setting, _address="[ No Address ]"):
             scrolling(driver)
             sleep(3)
             scrolling(driver)
-            log(f"{_address} بازدید با موفقیت ثبت شد ")
+            log(f"{_address} visit recorded successfully")
     except Exception:
         pass
 
@@ -68,10 +68,10 @@ def phoneclick(driver):
 
 
 def activate_mobile_mode(driver):
-    """نسخه نهایی خودکار با مختصات دقیق Responsive و iPhone 12 Pro"""
+    """the final function to enable mobile mode using pyautogui to control chrome devtools"""
     setting.fill()
     try:
-        log("در حال فعال‌سازی DevTools و حالت موبایل با شورتکات‌ها...")
+        log("enabling DevTools and mobile mode using shortcuts...")
         time.sleep(1.5)
 
         responsive_pos_windows = (377, 131)
@@ -84,42 +84,53 @@ def activate_mobile_mode(driver):
         device_toolbar_pos = (925, 121) 
         
         time.sleep(1)        
-        # باز کردن DevTools
+        # oppening dev tools
         pyautogui.click(three_dots_tools_pos)
+        log("clicking on three dots menu...")
         time.sleep(1.2)
+
         pyautogui.click(more_tools_pos)
+        log("clicking on more tools...")
         time.sleep(1.5)
+
         pyautogui.click(dev_tools_pos)
         time.sleep(1)
+        log("clicking on developer tools...")
+
         pyautogui.click(device_toolbar_pos)
         time.sleep(2)
+        log("clicking on device toolbar to enable mobile mode...")
+
         pyautogui.click(responsive_pos_mac)
         time.sleep(1.5)
+        log("selecting responsive mode...")
+
         pyautogui.click(iphone_pos_mac)
         time.sleep(10)
+        log("selecting iPhone 12 Pro device...")        
 
-        # رفرش صفحه برای اطمینان از فعال بودن حالت موبایل
+        #refresh the page to certain the mobile mode is applied
         try:
             driver.refresh()
         except:
             pass
 
-        log("🔄 صفحه در حالت موبایل رفرش شد.")
+        log("refreshing page on mobile mode 🔄...")
         try:
             sleep(setting.mobile_sleep)
         except:
             sleep(6)
 
-        log("✅ حالت موبایل با موفقیت فعال و تنظیم شد.")
+        log("✅ mobile mode enabled successfully.")
     except Exception as e:
-        log(f"❌ خطا در فعال‌سازی حالت موبایل: {e}")
+        log(f"❌ error on enabling mobile mode: {e}")
 
 
 def fillLinks(driver, Link, Links, scraper):
     try:
         links = driver.find_elements(By.TAG_NAME, "a")
     except Exception:
-        log("[13302] هیچ لینکی درون صفحه وجود نداشت")
+        log("[13302] no links found on the page.")
         return Links
 
     found = False
@@ -170,12 +181,12 @@ def fillLinks(driver, Link, Links, scraper):
                     log("بازگشت به صفحه قبل انجام نشد")
                 sleep(3)
         except Exception as e:
-            log(f"خطا در پردازش لینک: {e}")
+            log(f"error on processing link: {e}")
             continue
 
     if not found:
-        log("هیچ لینک هدفی پیدا نشد")
+        log("no target links found.")
     else:
-        log("تمام لینک‌های هدف بررسی شدند")
+        log("all target links have been checked.")
 
     return Links

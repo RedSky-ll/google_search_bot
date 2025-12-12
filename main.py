@@ -14,7 +14,6 @@ from _dependencies.functions.logging import log
 from _dependencies.functions.public import sleep , scroll , typing , scrolling, likelihood 
 from _dependencies.functions.chrome import fillLinks , getNewIp, authHandle , activate_mobile_mode , phoneclick
 from _dependencies.functions.App.app import Mobile
-# // mine
 
 setting = Setting()
 setting.fill()
@@ -45,7 +44,7 @@ try:
     mobile.init()
     pass
 except Exception as ex:
-    log(f"موبایل خطا داد \n{ex}\n")
+    log(f"mobile error \n{ex}\n")
 def scraper():
     chrome_options = uc.ChromeOptions()
     chrome_options.add_argument("--incognito")
@@ -57,7 +56,7 @@ def scraper():
     chrome_options.add_argument("--disable-dev-shm-usage")
     chrome_options.add_argument("--disable-gpu")
     global chrome
-    # هر بار Links جدید ساخته میشه
+    #create Links object every time to avoid data persistence between runs
     LinksObj = Links()
 
 
@@ -74,10 +73,10 @@ def scraper():
     sleep(12)
 
     chrome.get("https://google.com/")
-    log("مرورگر وارد گوگل شد")
+    log("browser entered google")
     scrolling(chrome)
     
-    # هندل پاپ آپ اولیه
+    # handle startup popups
     try:
         _buttons = WebDriverWait(chrome,15).until(EC.presence_of_all_elements_located((By.TAG_NAME,"button")))
         for _button in _buttons:
@@ -89,12 +88,12 @@ def scraper():
                     sleep(9)
                     _div.click()
                     _button.click()
-                    log("پاپ اپ هندل شد")
+                    log("popup handled")
                     break
             except:
                 pass
     except:
-        log("پاپ اپی برای استارت تعریف نشده")
+        log("no startup popup defined")
 
     _searchElement = WebDriverWait(chrome,15).until(EC.visibility_of_element_located((By.NAME,"q")))
     sleep(12)
@@ -109,15 +108,15 @@ def scraper():
     try:
         form = chrome.find_element(By.ID,"captcha-form")
         if (form.get_attribute("id").strip() == "captcha-form"):
-            log("مرورگر توسط گوگل ربات تشخیص داده شد")
-            chrome.execute_script("alert('ربات نیاز به ایپی جدید دارد');")
+            log("browser known as bot by google captcha")
+            chrome.execute_script("alert('bot need new IP');")
             getNewIp(mobile)
             chrome.quit()
             return
     except:
-        log("با موفقیت وارد صفحه اصلی شدیم")
+        log("successfully entered the main page")
 
-    # هندل دوباره پاپ آپ در نتایج
+    # handle popups again in results
     try:
         _buttons = WebDriverWait(chrome,15).until(EC.presence_of_all_elements_located((By.TAG_NAME,"button")))
         for _button in _buttons:
@@ -128,14 +127,14 @@ def scraper():
                     scroll(chrome,_div,0,400)
                     sleep(7)
                     _div.click()
-                    log("در صفحه اصلی پاپ اپی پیدا نشد ")
+                    log("no popup found on main page")
                     break
             except:
                 pass
     except:
-        log("در صفحه اصلی پاپ اپی پیدا نشد ")
+        log("no popup found on main page")
 
-    # پر کردن لینک‌ها
+    # filling links
     scrolling(chrome)
     activate_mobile_mode(chrome)
 
@@ -155,27 +154,27 @@ def scraper():
                     sleep(12)
                     # getNewIp(mobile)
                 else:
-                    log(f"{_link.address} جزو تارگت های ما نیست")
+                    log(f"{_link.address} is not one of our targets")
 
-            log("تمامی اسپانسر ها با موفقیت چک شدند")
+            log("all sponsors have been checked successfully")
         else:
-            log("اسپانسر پیدا نشد")
+            log("no sponsors found")
     except Exception as ex:
-        log(f"مشکل ناشناخته ای رخ داده {ex}")
+        log(f"an unknown error occurred {ex}")
 
-    # بستن مرورگر و آی‌پی جدید
+    # closing browser and new IP
     getNewIp(mobile)
     chrome.quit()
-    log("مرورگر بسته شد و برای اجرای بعدی آماده است")
+    log("browser closed and ready for next run")
 
 
 if __name__ == "__main__":
-    log("برنامه استارت شد ----")
+    log("program started ----")
     while True:
         try:
             scraper()
         except Exception as ex:
-            log(f"[1304] خطا هنگام اجرای برنامه \n{ex}\n")
+            log(f"[1304] error while running program \n{ex}\n")
             try:
                 chrome.quit()
             except:
@@ -184,16 +183,16 @@ if __name__ == "__main__":
 
 def unsave_activity_history():
     try:
-        log("در حال غیرفعال‌سازی ذخیره تاریخچه فعالیت‌ها...")
+        log("disabling activity history saving...")
         chrome.get("chrome://settings/privacySandbox")
         sleep(3)
         try:
             toggle = WebDriverWait(chrome, 10).until(
-                EC.element_to_be_clickable((By.CSS_SELECTOR, 'settings-toggle-button[aria-label="غیرفعال‌سازی تاریخچه فعالیت‌ها"]'))
+                EC.element_to_be_clickable((By.CSS_SELECTOR, 'settings-toggle-button[aria-label="Disable activity history saving"]'))
             )
             toggle.click()
-            log("✅ ذخیره تاریخچه فعالیت‌ها غیرفعال شد.")
+            log("✅ activity history saving disabled.")
         except Exception as e:
-            log(f"❌ خطا در غیرفعال‌سازی تاریخچه فعالیت‌ها: {e}")
+            log(f"❌ error disabling activity history saving: {e}")
     except Exception as e:
-        log(f"❌ خطا در دسترسی به تنظیمات حریم خصوصی: {e}")
+        log(f"❌ error accessing privacy settings: {e}")
