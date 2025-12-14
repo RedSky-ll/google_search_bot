@@ -13,6 +13,7 @@ def typing(element,text):
     for char in text:
         element.send_keys(char)
         sleep(randomtime(speed=1))
+
 def scroll(driver, element , x=0, y=0):
     driver.execute_script("arguments[0].scrollIntoView({block:'center'});",element)
 

@@ -6,6 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 import undetected_chromedriver as uc
 import pyautogui
+import math
 
 from _classes.setting import Setting
 from _classes._link import Links
@@ -13,7 +14,7 @@ from _classes.Link import Link
 from _classes.Address import Address
 from _dependencies.functions.logging import log
 from _dependencies.functions.public import sleep , scroll , typing , scrolling, likelihood 
-from _dependencies.functions.chrome import fillLinks , getNewIp, authHandle , activate_mobile_mode , phoneclick
+from _dependencies.functions.chrome import fillLinks , getNewIp, authHandle , activate_mobile_mode, human_scroll , phoneclick, human_click, idle_mouse_move, human_typing, advanced_human_typing_en, human_reading_scroll
 from _dependencies.functions.App.app import Mobile
 
 setting = Setting()
@@ -71,18 +72,44 @@ def scraper():
     #turning off Search customisation
     search_custom_btn_pos_mac = (1057, 240)
     search_custom_btn_pos_win = (1365, 276)
-    sleep(6)
-    chrome.get("https://www.google.com/history/optout?hl=en-IR")
-    sleep(12)
-    pyautogui.click(search_custom_btn_pos_win)
-    log("clicking on three dots menu...")
+    random_x_in_range = random.randint(245, 1220)
+    search_box_top_pos_mac = (random_x_in_range, 94)
+
+    sleep(2)
+    pyautogui.click()
+    sleep(2)
+
+    #change the cursor position to search box in human way and click on it
+    human_click(*search_box_top_pos_mac)
+    log("cursor position changed and clicked on chrome search box")
+    sleep(2)
+
+    #some mouse movements to simulate human activity
+    idle_mouse_move()
+    sleep(1)
+    #type the given text in human way with delay and mistakes simulation human typing
+    advanced_human_typing_en("www.google.com/history/optout?hl=en-IR")
+    sleep(2)
+
+    pyautogui.press("enter")
     sleep(12)
 
-    chrome.get("https://google.com/")
-    log("browser entered google")
-    sleep(6)
-    scrolling(chrome)
-    
+    human_click(*search_custom_btn_pos_mac)
+    log("mouse clicked on search customization button")
+    # pyautogui.click(search_custom_btn_pos_win)
+    sleep(2)
+    idle_mouse_move()
+    log("mouse moved in idle way")
+    sleep(12)
+
+    human_click(*search_box_top_pos_mac)
+    log("mouse clicked on search box to type")
+    sleep(2)
+    advanced_human_typing_en("google.com")
+    sleep(2)
+    pyautogui.press("enter")
+    log("browser navigated to google.com")
+    sleep(6)    
     # handle startup popups
     try:
         _buttons = WebDriverWait(chrome,15).until(EC.presence_of_all_elements_located((By.TAG_NAME,"button")))
@@ -104,11 +131,13 @@ def scraper():
 
     _searchElement = WebDriverWait(chrome,15).until(EC.visibility_of_element_located((By.NAME,"q")))
     sleep(12)
-    scrolling(chrome)
+    human_reading_scroll(chrome)
     typing(_searchElement,setting.query)
     sleep(12) 
     _searchElement.send_keys(Keys.ENTER)
-    del _searchElement       
+    del _searchElement 
+
+
     authHandle(chrome,setting)
     
     # چک کردن کپچا
@@ -142,7 +171,8 @@ def scraper():
         log("no popup found on main page")
 
     # filling links
-    scrolling(chrome)
+
+    idle_mouse_move()
     activate_mobile_mode(chrome)
 
     out = fillLinks(chrome, Link, LinksObj, scraper)
@@ -153,8 +183,7 @@ def scraper():
                 if likelihood(setting, _link.address):
                     _link.container.click()
                     _address = _link.address
-                    scrolling(chrome)
-                    scrolling(chrome)
+                    human_scroll(chrome)
 
                     phoneclick(chrome)
                     authHandle(chrome,setting,_address)
