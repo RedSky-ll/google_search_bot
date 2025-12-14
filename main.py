@@ -1,4 +1,5 @@
 import time
+import random
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
@@ -45,6 +46,8 @@ try:
     pass
 except Exception as ex:
     log(f"mobile error \n{ex}\n")
+
+
 def scraper():
     chrome_options = uc.ChromeOptions()
     chrome_options.add_argument("--incognito")
@@ -66,14 +69,18 @@ def scraper():
     setting.fill()
 
     #turning off Search customisation
-    search_custom_btn_pos = (1057, 240)
+    search_custom_btn_pos_mac = (1057, 240)
+    search_custom_btn_pos_win = (1365, 276)
+    sleep(6)
     chrome.get("https://www.google.com/history/optout?hl=en-IR")
     sleep(12)
-    pyautogui.click(search_custom_btn_pos)
+    pyautogui.click(search_custom_btn_pos_win)
+    log("clicking on three dots menu...")
     sleep(12)
 
     chrome.get("https://google.com/")
     log("browser entered google")
+    sleep(6)
     scrolling(chrome)
     
     # handle startup popups

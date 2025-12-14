@@ -1,0 +1,376 @@
+[2025-12-12 22:44:52] ❌ موبایل خطا داد در اتصال:
+Message: Could not find a connected Android device in 20000ms
+Stacktrace:
+UnknownError: Could not find a connected Android device in 20000ms
+    at getResponseForW3CError (C:\Users\stock laptop\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.ts:1103:34)
+    at asyncHandler (C:\Users\stock laptop\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.ts:507:57)
+The above error is caused by
+Error: Could not find a connected Android device in 20000ms
+    at ADB.getDevicesWithRetry (C:\Users\stock laptop\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-adb\lib\tools\system-calls.js:295:13)
+    at AndroidUiautomator2Driver.getDeviceInfoFromCaps (C:\Users\stock laptop\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\device\common.js:41:21)
+    at AndroidUiautomator2Driver.createSession (C:\Users\stock laptop\.appium\node_modules\appium-uiautomator2-driver\lib\driver.ts:361:30)
+    at AppiumDriver.createSession (C:\Users\stock laptop\AppData\Roaming\npm\node_modules\appium\lib\appium.js:360:35)
+[2025-12-12 22:44:52] program started ----
+[2025-12-12 23:17:29] ❌ موبایل خطا داد در اتصال:
+HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001ACBFF7AD50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2025-12-12 23:17:29] program started ----
+[2025-12-12 23:19:58] ❌ موبایل خطا داد در اتصال:
+HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A56FB0AC50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2025-12-12 23:19:58] program started ----
+[2025-12-12 23:20:18] browser entered google
+[2025-12-12 23:20:59] [ No Address ] visit recorded successfully
+[2025-12-12 23:20:59] successfully entered the main page
+[2025-12-12 23:20:59] enabling DevTools and mobile mode using shortcuts...
+[2025-12-12 23:21:01] clicking on three dots menu...
+[2025-12-12 23:21:03] clicking on more tools...
+[2025-12-12 23:21:05] clicking on developer tools...
+[2025-12-12 23:21:07] clicking on device toolbar to enable mobile mode...
+[2025-12-12 23:21:09] selecting responsive mode...
+[2025-12-12 23:21:19] selecting iPhone 12 Pro device...
+[2025-12-12 23:21:23] refreshing page on mobile mode 🔄...
+[2025-12-12 23:21:31] ✅ mobile mode enabled successfully.
+[2025-12-12 23:21:32] no target links found.
+[2025-12-12 23:21:32] no sponsors found
+[2025-12-12 23:21:41] ❌ موبایل خطا داد در اتصال:
+HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A570B066D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2025-12-12 23:21:49] ❌ موبایل خطا داد در اتصال:
+HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A570B162D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2025-12-12 23:21:49] ❌ موبایل خطا داد در airplane:
+'NoneType' object has no attribute 'open_notifications'
+[2025-12-12 23:21:49] browser closed and ready for next run
+[2025-12-12 23:55:44] ❌ موبایل خطا داد در اتصال:
+HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F427B5BC50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2025-12-12 23:55:44] program started ----
+[2025-12-12 23:56:05] [1304] error while running program 
+<urlopen error [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>
+
+[2025-12-12 23:56:40] browser entered google
+[2025-12-12 23:56:47] [1304] error while running program 
+Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=143.0.7499.42); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x530d13
+	0x530d54
+	0x31e6dd
+	0x30d99e
+	0x32c4e6
+	0x3921d8
+	0x3ad44c
+	0x38b2e6
+	0x35d321
+	0x35e1d4
+	0x784d54
+	0x78030b
+	0x79cbea
+	0x54ac18
+	0x552c1d
+	0x539018
+	0x5391d9
+	0x523568
+	0x76007ba9
+	0x77cac3ab
+	0x77cac32f
+
+
+[2025-12-12 23:59:19] ❌ موبایل خطا داد در اتصال:
+HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000022ADAF6BD50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2025-12-12 23:59:19] program started ----
+[2025-12-12 23:59:36] browser entered google
+[2025-12-13 00:00:01] successfully entered the main page
+[2025-12-13 00:00:01] no popup found on main page
+[2025-12-13 00:00:01] [1304] error while running program 
+Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.42)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0xc60d13
+	0xc60d54
+	0xa4e6dd
+	0xa2ca8d
+	0xac1ffb
+	0xadd44c
+	0xabb2e6
+	0xa8d321
+	0xa8e1d4
+	0xeb4d54
+	0xeb030b
+	0xeccbea
+	0xc7ac18
+	0xc82c1d
+	0xc69018
+	0xc691d9
+	0xc53568
+	0x76007ba9
+	0x77cac3ab
+	0x77cac32f
+
+
+[2025-12-13 00:43:44] ❌ موبایل خطا داد در اتصال:
+HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EAFF71BB90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2025-12-13 00:43:44] program started ----
+[2025-12-13 00:44:28] browser entered google
+[2025-12-13 00:45:01] [ No Address ] visit recorded successfully
+[2025-12-13 00:45:01] successfully entered the main page
+[2025-12-13 00:45:03] enabling DevTools and mobile mode using shortcuts...
+[2025-12-13 00:45:05] clicking on three dots menu...
+[2025-12-13 00:45:07] clicking on more tools...
+[2025-12-13 00:45:09] clicking on developer tools...
+[2025-12-13 00:45:12] clicking on device toolbar to enable mobile mode...
+[2025-12-13 00:45:13] selecting responsive mode...
+[2025-12-13 00:49:33] ❌ موبایل خطا داد در اتصال:
+HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000163CAF3EAD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2025-12-13 00:49:33] program started ----
+[2025-12-13 00:49:49] clicking on three dots menu...
+[2025-12-13 00:50:00] browser entered google
+[2025-12-13 00:50:00] [1304] error while running program 
+Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.42)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x10f0d13
+	0x10f0d54
+	0xede6dd
+	0xebca8d
+	0xf51ffb
+	0xf6d44c
+	0xf4b2e6
+	0xf1d321
+	0xf1e1d4
+	0x1344d54
+	0x134030b
+	0x135cbea
+	0x110ac18
+	0x1112c1d
+	0x10f9018
+	0x10f91d9
+	0x10e3568
+	0x76007ba9
+	0x77cac3ab
+	0x77cac32f
+
+
+[2025-12-13 00:52:12] ❌ موبایل خطا داد در اتصال:
+HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A76AC6F110>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2025-12-13 00:52:12] program started ----
+[2025-12-13 00:52:34] clicking on three dots menu...
+[2025-12-13 00:52:47] browser entered google
+[2025-12-13 00:53:05] [ No Address ] detected on this address
+[2025-12-13 00:53:05] browser known as bot by google captcha
+[2025-12-13 00:53:14] ❌ موبایل خطا داد در اتصال:
+HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A76AC80FD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2025-12-13 00:53:22] ❌ موبایل خطا داد در اتصال:
+HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A76AC80E10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2025-12-13 00:53:22] ❌ موبایل خطا داد در airplane:
+'NoneType' object has no attribute 'open_notifications'
+[2025-12-13 00:53:42] clicking on three dots menu...
+[2025-12-13 00:53:49] browser entered google
+[2025-12-13 00:54:21] [ No Address ] visit recorded successfully
+[2025-12-13 00:54:21] browser known as bot by google captcha
+[2025-12-13 00:54:29] ❌ موبایل خطا داد در اتصال:
+HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A76AC8BCD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2025-12-13 00:54:38] ❌ موبایل خطا داد در اتصال:
+HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A76ACAFE50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2025-12-13 00:54:38] ❌ موبایل خطا داد در airplane:
+'NoneType' object has no attribute 'open_notifications'
+[2025-12-13 00:54:53] clicking on three dots menu...
+[2025-12-13 00:55:01] browser entered google
+[2025-12-13 00:55:20] [ No Address ] visit recorded successfully
+[2025-12-13 00:55:20] successfully entered the main page
+[2025-12-13 00:55:21] enabling DevTools and mobile mode using shortcuts...
+[2025-12-13 00:56:02] refreshing page on mobile mode 🔄...
+[2025-12-13 00:56:07] ✅ mobile mode enabled successfully.
+[2025-12-13 00:56:07] [13302] no links found on the page.
+[2025-12-13 00:56:08] no sponsors found
+[2025-12-13 01:12:13] ❌ موبایل خطا داد در اتصال:
+HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B1BB00ED90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2025-12-13 01:12:13] program started ----
+[2025-12-13 01:13:05] clicking on three dots menu...
+[2025-12-13 01:13:17] browser entered google
+[2025-12-13 01:13:49] [ No Address ] visit recorded successfully
+[2025-12-13 01:13:49] browser known as bot by google captcha
+[2025-12-13 01:13:57] ❌ موبایل خطا داد در اتصال:
+HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B1BB020490>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2025-12-13 01:14:05] ❌ موبایل خطا داد در اتصال:
+HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B1BB01BE10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2025-12-13 01:14:05] ❌ موبایل خطا داد در airplane:
+'NoneType' object has no attribute 'open_notifications'
+[2025-12-13 01:14:31] [1304] error while running program 
+<urlopen error [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>
+
+[2025-12-13 01:14:57] [1304] error while running program 
+<urlopen error [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>
+
+[2025-12-13 01:15:15] ❌ موبایل خطا داد در اتصال:
+HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000170BFDFF210>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2025-12-13 01:15:15] program started ----
+[2025-12-13 01:15:36] clicking on three dots menu...
+[2025-12-13 01:15:41] browser entered google
+[2025-12-13 01:16:04] [ No Address ] visit recorded successfully
+[2025-12-13 01:16:04] successfully entered the main page
+[2025-12-13 01:16:04] enabling DevTools and mobile mode using shortcuts...
+[2025-12-13 01:16:07] clicking on three dots menu...
+[2025-12-13 01:16:08] clicking on more tools...
+[2025-12-13 01:16:12] clicking on developer tools...
+[2025-12-13 01:16:15] clicking on device toolbar to enable mobile mode...
+[2025-12-13 01:16:17] selecting responsive mode...
+[2025-12-13 01:16:17] selecting iPhone 12 Pro device...
+[2025-12-13 01:16:24] refreshing page on mobile mode 🔄...
+[2025-12-13 01:16:31] ✅ mobile mode enabled successfully.
+[2025-12-13 01:16:33] no target links found.
+[2025-12-13 01:16:33] no sponsors found
+[2025-12-13 01:16:42] ❌ موبایل خطا داد در اتصال:
+HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000170C0DED790>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2025-12-13 01:16:50] ❌ موبایل خطا داد در اتصال:
+HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000170C0DF93D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2025-12-13 01:16:50] ❌ موبایل خطا داد در airplane:
+'NoneType' object has no attribute 'open_notifications'
+[2025-12-13 01:16:53] browser closed and ready for next run
+[2025-12-13 01:21:21] ❌ موبایل خطا داد در اتصال:
+HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000229FBFBED90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2025-12-13 01:21:21] program started ----
+[2025-12-13 01:21:40] clicking on three dots menu...
+[2025-12-13 01:21:50] browser entered google
+[2025-12-13 01:22:18] [ No Address ] visit recorded successfully
+[2025-12-13 01:22:18] browser known as bot by google captcha
+[2025-12-13 01:22:27] ❌ موبایل خطا داد در اتصال:
+HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000229FBFD0290>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2025-12-13 01:22:35] ❌ موبایل خطا داد در اتصال:
+HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000229FBFCB650>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2025-12-13 01:22:35] ❌ موبایل خطا داد در airplane:
+'NoneType' object has no attribute 'open_notifications'
+[2025-12-13 01:22:51] ❌ موبایل خطا داد در اتصال:
+HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002624243EB90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2025-12-13 01:22:51] program started ----
+[2025-12-13 01:23:13] [1304] error while running program 
+<urlopen error [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>
+
+[2025-12-13 01:23:34] clicking on three dots menu...
+[2025-12-13 01:23:46] browser entered google
+[2025-12-13 01:24:13] [ No Address ] visit recorded successfully
+[2025-12-13 01:24:13] browser known as bot by google captcha
+[2025-12-13 01:24:21] ❌ موبایل خطا داد در اتصال:
+HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000262434202D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2025-12-13 01:24:30] ❌ موبایل خطا داد در اتصال:
+HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002624244B590>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2025-12-13 01:24:30] ❌ موبایل خطا داد در airplane:
+'NoneType' object has no attribute 'open_notifications'
+[2025-12-13 01:24:48] clicking on three dots menu...
+[2025-12-13 01:25:01] browser entered google
+[2025-12-13 01:25:19] [ No Address ] detected on this address
+[2025-12-13 01:25:19] browser known as bot by google captcha
+[2025-12-13 01:25:27] successfully entered the main page
+[2025-12-13 01:25:31] no popup found on main page
+[2025-12-13 01:25:31] enabling DevTools and mobile mode using shortcuts...
+[2025-12-13 01:30:47] ✅ موبایل با موفقیت کانفیگ و به Appium متصل شد
+[2025-12-13 01:30:47] program started ----
+[2025-12-13 01:30:49] [1304] error while running program 
+<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>
+
+[2025-12-13 01:31:14] clicking on three dots menu...
+[2025-12-13 01:31:23] browser entered google
+[2025-12-13 01:31:53] [ No Address ] visit recorded successfully
+[2025-12-13 01:31:53] successfully entered the main page
+[2025-12-13 01:31:54] enabling DevTools and mobile mode using shortcuts...
+[2025-12-13 01:31:56] clicking on three dots menu...
+[2025-12-13 01:31:58] clicking on more tools...
+[2025-12-13 01:32:01] clicking on developer tools...
+[2025-12-13 01:32:04] clicking on device toolbar to enable mobile mode...
+[2025-12-13 01:32:06] selecting responsive mode...
+[2025-12-13 01:32:06] selecting iPhone 12 Pro device...
+[2025-12-13 01:32:20] refreshing page on mobile mode 🔄...
+[2025-12-13 01:32:25] ✅ mobile mode enabled successfully.
+[2025-12-13 01:32:29] no target links found.
+[2025-12-13 01:32:29] no sponsors found
+[2025-12-13 01:32:48] ✅ حالت پرواز با موفقیت خاموش/روشن شد (IP جدید فعال شد)
+[2025-12-13 01:32:57] browser closed and ready for next run
+[2025-12-13 01:33:29] clicking on three dots menu...
+[2025-12-13 01:33:41] browser entered google
+[2025-12-13 01:34:16] [ No Address ] visit recorded successfully
+[2025-12-13 01:34:16] browser known as bot by google captcha
+[2025-12-13 01:34:51] ✅ حالت پرواز با موفقیت خاموش/روشن شد (IP جدید فعال شد)
+[2025-12-13 01:35:18] clicking on three dots menu...
+[2025-12-13 01:35:32] browser entered google
+[2025-12-13 01:36:02] [ No Address ] visit recorded successfully
+[2025-12-13 01:36:02] successfully entered the main page
+[2025-12-13 01:36:02] enabling DevTools and mobile mode using shortcuts...
+[2025-12-13 01:36:05] clicking on three dots menu...
+[2025-12-13 01:36:07] clicking on more tools...
+[2025-12-13 01:36:10] clicking on developer tools...
+[2025-12-13 01:36:13] clicking on device toolbar to enable mobile mode...
+[2025-12-13 01:36:15] selecting responsive mode...
+[2025-12-13 01:36:15] selecting iPhone 12 Pro device...
+[2025-12-13 01:36:24] refreshing page on mobile mode 🔄...
+[2025-12-13 01:36:31] ✅ mobile mode enabled successfully.
+[2025-12-13 01:36:36] no target links found.
+[2025-12-13 01:36:36] no sponsors found
+[2025-12-13 01:37:13] ✅ حالت پرواز با موفقیت خاموش/روشن شد (IP جدید فعال شد)
+[2025-12-13 01:37:20] browser closed and ready for next run
+[2025-12-13 01:37:35] clicking on three dots menu...
+[2025-12-13 01:51:48] ✅ موبایل با موفقیت کانفیگ و به Appium متصل شد
+[2025-12-13 01:51:48] program started ----
+[2025-12-13 01:52:14] clicking on three dots menu...
+[2025-12-13 01:52:26] browser entered google
+[2025-12-13 01:52:57] [ No Address ] detected on this address
+[2025-12-13 01:52:57] browser known as bot by google captcha
+[2025-12-13 01:53:40] ✅ حالت پرواز با موفقیت خاموش/روشن شد (IP جدید فعال شد)
+[2025-12-13 01:54:53] clicking on three dots menu...
+[2025-12-13 01:54:59] browser entered google
+[2025-12-13 01:55:28] [ No Address ] visit recorded successfully
+[2025-12-13 01:55:29] browser known as bot by google captcha
+[2025-12-13 01:55:59] ✅ حالت پرواز با موفقیت خاموش/روشن شد (IP جدید فعال شد)
+[2025-12-13 01:56:47] clicking on three dots menu...
+[2025-12-13 01:56:59] browser entered google
+[2025-12-13 01:57:34] [ No Address ] visit recorded successfully
+[2025-12-13 01:57:34] successfully entered the main page
+[2025-12-13 01:57:34] enabling DevTools and mobile mode using shortcuts...
+[2025-12-13 01:57:39] clicking on three dots menu...
+[2025-12-13 01:57:47] clicking on more tools...
+[2025-12-13 01:57:53] clicking on developer tools...
+[2025-12-13 01:57:59] clicking on device toolbar to enable mobile mode...
+[2025-12-13 01:58:03] selecting responsive mode...
+[2025-12-13 01:58:03] selecting iPhone 12 Pro device...
+[2025-12-13 01:58:16] refreshing page on mobile mode 🔄...
+[2025-12-13 01:58:25] ✅ mobile mode enabled successfully.
+[2025-12-13 01:58:26] لینک هدف پیدا شد: https://esf-emdad24.com/
+[2025-12-13 01:58:40] لینک هدف پیدا شد: https://emdadzenderod.com/
+[2025-12-13 01:58:54] لینک هدف پیدا شد: https://esf-emdad24.com/
+[2025-12-13 01:59:06] لینک هدف پیدا شد: https://emdadzenderod.com/
+[2025-12-13 01:59:15] all target links have been checked.
+[2025-12-13 01:59:15] no sponsors found
+[2025-12-13 01:59:38] ✅ حالت پرواز با موفقیت خاموش/روشن شد (IP جدید فعال شد)
+[2025-12-13 01:59:46] browser closed and ready for next run
+[2025-12-13 02:00:17] clicking on three dots menu...
+[2025-12-13 02:00:27] browser entered google
+[2025-12-13 02:01:08] [ No Address ] visit recorded successfully
+[2025-12-13 02:01:08] successfully entered the main page
+[2025-12-13 02:01:08] enabling DevTools and mobile mode using shortcuts...
+[2025-12-13 02:01:10] clicking on three dots menu...
+[2025-12-13 02:01:13] clicking on more tools...
+[2025-12-13 02:01:27] clicking on developer tools...
+[2025-12-13 02:01:31] clicking on device toolbar to enable mobile mode...
+[2025-12-13 02:01:36] selecting responsive mode...
+[2025-12-13 02:01:36] selecting iPhone 12 Pro device...
+[2025-12-13 02:01:36] refreshing page on mobile mode 🔄...
+[2025-12-13 02:01:43] ✅ mobile mode enabled successfully.
+[2025-12-13 02:01:44] لینک هدف پیدا شد: https://esf-emdad24.com/
+[2025-12-13 02:01:58] لینک هدف پیدا شد: https://esf-emdad24.com/
+[2025-12-13 02:02:11] all target links have been checked.
+[2025-12-13 02:02:11] no sponsors found
+[2025-12-13 02:02:31] ✅ حالت پرواز با موفقیت خاموش/روشن شد (IP جدید فعال شد)
+[2025-12-13 02:02:46] browser closed and ready for next run
+[2025-12-13 02:03:23] clicking on three dots menu...
+[2025-12-13 02:03:31] browser entered google
+[2025-12-13 02:04:07] [ No Address ] visit recorded successfully
+[2025-12-13 02:04:07] browser known as bot by google captcha
+[2025-12-13 02:04:33] ✅ حالت پرواز با موفقیت خاموش/روشن شد (IP جدید فعال شد)
+[2025-12-13 02:05:52] clicking on three dots menu...
+[2025-12-13 02:06:01] browser entered google
+[2025-12-13 02:06:42] [ No Address ] detected on this address
+[2025-12-13 02:06:42] browser known as bot by google captcha
+[2025-12-13 02:07:03] ✅ حالت پرواز با موفقیت خاموش/روشن شد (IP جدید فعال شد)
+[2025-12-13 02:07:37] clicking on three dots menu...
+[2025-12-13 02:07:51] browser entered google

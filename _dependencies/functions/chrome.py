@@ -6,7 +6,6 @@ import re
 from .App.app import Mobile
 from _classes.setting import Setting
 import pyautogui
-import time
 
 mobile = Mobile()
 setting = Setting()
@@ -72,42 +71,54 @@ def activate_mobile_mode(driver):
     setting.fill()
     try:
         log("enabling DevTools and mobile mode using shortcuts...")
-        time.sleep(1.5)
+        sleep(10)
 
-        responsive_pos_windows = (377, 131)
-        iphone_pos_windows = (377, 309)
-        responsive_pos_mac = (264, 139)
+        #win
+        three_dots_tools_pos_win = (1908, 92) 
+        more_tools_pos_win = (1707, 768) 
+        dev_tools_pos_win = (1394, 960) 
+    
+        device_toolbar_pos_win = (1305, 136) 
+        responsive_pos_win = (412, 137)
+        iphone_pos_win = (383, 308)
+
+        #mac
+        three_dots_tools_pos_mac = (1418, 102)
+        more_tools_pos_mac = (1374, 624)
+        dev_tools_pos_mac = (1009, 789)
+        device_toolbar_pos_mac = (925, 121)
         iphone_pos_mac = (289, 227)
-        three_dots_tools_pos = (1418, 102) 
-        more_tools_pos = (1374, 624) 
-        dev_tools_pos = (1009, 789) 
-        device_toolbar_pos = (925, 121) 
+        responsive_pos_mac = (264, 139)
         
-        time.sleep(1)        
-        # oppening dev tools
-        pyautogui.click(three_dots_tools_pos)
+        # click on three dots menu
+        pyautogui.click(three_dots_tools_pos_win)
         log("clicking on three dots menu...")
-        time.sleep(1.2)
+        sleep(10)
 
-        pyautogui.click(more_tools_pos)
+        # click on more tools
+        pyautogui.click(more_tools_pos_win)
         log("clicking on more tools...")
-        time.sleep(1.5)
+        sleep(10)
 
-        pyautogui.click(dev_tools_pos)
-        time.sleep(1)
+        # click on dev tools
+        pyautogui.click(dev_tools_pos_win)
+        sleep(10)
         log("clicking on developer tools...")
 
-        pyautogui.click(device_toolbar_pos)
-        time.sleep(2)
+        # click on device toolbar
+        pyautogui.click(device_toolbar_pos_win)
+        sleep(10)
         log("clicking on device toolbar to enable mobile mode...")
 
-        pyautogui.click(responsive_pos_mac)
-        time.sleep(1.5)
+        # click on responsive mode
+        pyautogui.click(responsive_pos_win)
+        sleep(10)
         log("selecting responsive mode...")
 
-        pyautogui.click(iphone_pos_mac)
-        time.sleep(10)
+        # click on iphone 12 pro device
+        pyautogui.click(iphone_pos_win)
         log("selecting iPhone 12 Pro device...")        
+        sleep(10)
 
         #refresh the page to certain the mobile mode is applied
         try:

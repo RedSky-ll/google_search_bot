@@ -8,7 +8,7 @@
     "DEVICE_PLATFORM": "Android",
     "AIRPLANE_X": 551,
     "AIRPLANE_Y": 467,
-    "MOBILE_SLEEP": 10,
+    "MOBILE_SLEEP": 16,
 
     "INSPECT_LOCATION": "_dependencies/data/inspect_option.png",
     "MOBILE_TOGGLE": "_dependencies/data/mobile_toggle.png",
@@ -16,9 +16,9 @@
     "IPHONE12PRO_OPTION": "_dependencies/data/iphone12pro_option.png",
 
     "MY_SITES": [
-        "example1.com",
-        "example2.com",
-        "example3.com"
+        "example.com",
+        "example.org",
+        "example.net"
 
     ],
 
