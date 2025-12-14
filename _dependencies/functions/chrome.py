@@ -7,6 +7,7 @@ from .App.app import Mobile
 from _classes.setting import Setting
 import pyautogui
 
+
 mobile = Mobile()
 setting = Setting()
 

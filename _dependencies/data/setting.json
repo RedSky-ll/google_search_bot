@@ -1,5 +1,5 @@
 {
-    "QUERY": "امداد خودرو سایپا اصفهان",
+    "QUERY": "",
     "SPEED": 3,
     "PROXY_SERVER": false,
     "DEVICE": "iPhone 12 Pro",
@@ -16,19 +16,12 @@
     "IPHONE12PRO_OPTION": "_dependencies/data/iphone12pro_option.png",
 
     "MY_SITES": [
-        "emdadzenderod.com",
-        "emdadkhodro110.com",
-        "esfahan-emdad.com",
-        "emdadkhodroisf.site",
-        "emdadkhodrooshahreza.com",
-        "www.esf-emdad24.com",
-        "www.emdadafagh.com",
-        "www.aghayeemdad.com",
-        "www.itoll.com",
-        "https://azkiservice.com"
-
+        "example.com",
+        "example.org",
+        "example.net"
 
     ],
+
 
     "INTERRUPT": [
         "Your connection was interrupted",
